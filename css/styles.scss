@@ -1,6 +1,9 @@
 // ==============================================
 // Variables
 // ==============================================
+// Breakpoints
+$breakpoint-tablet: 600px;
+$breakpoint-desktop: 1200px;
 // Colors
 $primary-blue: #5367ff;
 $light-primary-blue: #7f8dfc;
@@ -71,9 +74,12 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: $font-body;
-  color: $dark-grey;
+  color: $black;
   background-color: $primary-blue;
   font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 // Typography
@@ -94,6 +100,314 @@ p {
   overflow-wrap: break-word;
 }
 
+// ==============================================
+// Components
+// ==============================================
+
+// Header
+.header {
+  padding: $spacing-md;
+  background-color: $primary-blue;
+  text-align: center;
+
+  &__profile {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto $spacing-md;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba($black, 0.2);
+    }
+
+    &-name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: $spacing-sm;
+      font-size: $font-size-large;
+      border-radius: 8px;
+      color: $white;
+      background: linear-gradient(to top, rgba($black, 0.8), rgba($black, 0));
+      margin: 0;
+    }
+  }
+
+  &__about {
+    background-color: $white;
+    margin: 0 auto $spacing-md;
+    padding: $spacing-md;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba($black, 0.1);
+    max-width: 500px;
+
+    &-title {
+      font-size: $font-size-medium;
+      margin-bottom: $spacing-sm;
+      color: $dark-grey;
+    }
+
+    &-text {
+      color: $dark-grey;
+      font-size: $font-size-small;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: $spacing-sm;
+    justify-content: center;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      fill: $white;
+    }
+  }
+}
+
+// Main content
+.main {
+  padding: $spacing-md;
+  background-color: $light-grey;
+}
+
+// Work section
+.work {
+  &__title {
+    text-align: center;
+    margin-bottom: $spacing-md;
+    font-size: $font-size-large;
+  }
+
+  &__grid {
+    display: grid;
+    gap: $spacing-md;
+    grid-template-columns: 1fr;
+  }
+
+  &__card {
+    background: $white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba($medium-grey, 0.2);
+    box-shadow: 0 4px 12px rgba($black, 0.1);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba($black, 0.15);
+    }
+
+    &-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $spacing-sm;
+      border-bottom: 1px solid rgba($medium-grey, 0.1);
+    }
+
+    &-title {
+      font-size: $font-size-medium;
+      margin: 0;
+    }
+
+    &-links {
+      display: flex;
+      gap: $spacing-sm;
+
+      a {
+        display: flex;
+        align-items: center;
+        color: $primary-blue;
+        text-decoration: none;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          margin-left: 4px;
+        }
+
+        &:hover {
+          color: $light-primary-blue;
+        }
+      }
+    }
+
+    &-desc {
+      padding: $spacing-sm;
+      color: $dark-grey;
+      font-size: $font-size-small;
+    }
+  }
+}
+
+// Footer
+.footer {
+  position: relative;
+  color: $white;
+  padding: $spacing-md;
+  overflow: hidden;
+  min-height: 300px;
+  margin-top: auto;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.3);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    color: $white;
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-large;
+  }
+
+  &__text {
+    margin-bottom: $spacing-md;
+    font-size: $font-size-small;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-md;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    color: $white;
+    text-decoration: none;
+    font-size: $font-size-small;
+
+    &:hover {
+      color: $light-primary-blue;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+
+      svg {
+        width: 32px;
+        height: 32px;
+        fill: currentColor;
+      }
+
+      &:hover {
+        color: $light-primary-blue;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: $font-size-extra-small;
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: $light-primary-blue;
+      }
+    }
+  }
+}
+
+// Tablet styles
+@media (min-width: $breakpoint-tablet) {
+  .work {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .footer {
+    &__links {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+// Desktop styles
+@media (min-width: $breakpoint-desktop) {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-lg;
+    text-align: left;
+    align-items: center;
+    padding: $spacing-lg;
+
+    &__profile {
+      margin-bottom: 0;
+    }
+
+    &__about {
+      margin-bottom: 0;
+    }
+
+    &__social {
+      justify-content: flex-start;
+    }
+  }
+
+  .work {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .footer {
+    &__content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+}
+
 // Media elements
 img,
 picture,
@@ -110,18 +424,4 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-// ==============================================
-// Footer
-// ==============================================
-footer {
-  color: $light-grey;
-  text-align: center;
-  position: fixed;
-  bottom: 1vh;
-  left: 0;
-  width: 100%;
-  font-family: $font-body;
-  font-size: $font-size-small;
 }

@@ -17,19 +17,503 @@
     <title>My Homepage</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer>
-      <p>
-        &copy; <time datetime="2025">2025</time> Created by
+    <header class="header">
+      <div class="header__profile">
+        <img
+          src="./img/profile_picture.png"
+          alt="Profile picture of Sylvain Web"
+          class="header__profile-img"
+        />
+        <h1 class="header__profile-name">Sylvain Web</h1>
+      </div>
+      <div class="header__about">
+        <h2 class="header__about-title">About Me</h2>
+        <p class="header__about-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+          justo nec nunc vestibulum tincidunt. Praesent vehicula, nisl in
+          efficitur dignissim, lorem nisl varius nisi, non hendrerit nunc dolor
+          sit amet lectus.
+        </p>
+      </div>
+      <div class="header__social">
         <a
           href="https://github.com/SylvainPS78"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit Sylvain Web's GitHub profile (opens in new tab)"
-          >Sylvain Web</a
+          aria-label="Visit my GitHub profile"
         >
-      </p>
+          <svg class="header__social-icon"></svg>
+        </a>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit my LinkedIn profile"
+        >
+          <svg class="header__social-icon"></svg>
+        </a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="work">
+        <h2 class="work__title">My Work</h2>
+        <div class="work__grid">
+          <article class="work__card">
+            <img
+              src="./img/battleship.png"
+              alt="Screenshot of Battleship game project"
+              class="work__card-img"
+            />
+            <div class="work__card-header">
+              <h3 class="work__card-title">Battleship Game</h3>
+              <div class="work__card-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View source code"
+                >
+                  <span>Code</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View live demo"
+                >
+                  <span>Demo</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="work__card-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </article>
+          <article class="work__card">
+            <img
+              src="./img/contact_form.png"
+              alt="Screenshot of Contact Form project"
+              class="work__card-img"
+            />
+            <div class="work__card-header">
+              <h3 class="work__card-title">Contact Form</h3>
+              <div class="work__card-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View source code"
+                >
+                  <span>Code</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View live demo"
+                >
+                  <span>Demo</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="work__card-desc">
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </article>
+          <article class="work__card">
+            <img
+              src="./img/e_commerce_page.png"
+              alt="Screenshot of E-commerce page project"
+              class="work__card-img"
+            />
+            <div class="work__card-header">
+              <h3 class="work__card-title">E-commerce Page</h3>
+              <div class="work__card-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View source code"
+                >
+                  <span>Code</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View live demo"
+                >
+                  <span>Demo</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="work__card-desc">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+          </article>
+          <article class="work__card">
+            <img
+              src="./img/knight_travail.png"
+              alt="Screenshot of Knight Travail project"
+              class="work__card-img"
+            />
+            <div class="work__card-header">
+              <h3 class="work__card-title">Knight Travail</h3>
+              <div class="work__card-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View source code"
+                >
+                  <span>Code</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View live demo"
+                >
+                  <span>Demo</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="work__card-desc">
+              Duis aute irure dolor in reprehenderit in voluptate velit.
+            </p>
+          </article>
+          <article class="work__card">
+            <img
+              src="./img/restaurant_page.png"
+              alt="Screenshot of Restaurant Page project"
+              class="work__card-img"
+            />
+            <div class="work__card-header">
+              <h3 class="work__card-title">Restaurant Page</h3>
+              <div class="work__card-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View source code"
+                >
+                  <span>Code</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View live demo"
+                >
+                  <span>Demo</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="work__card-desc">
+              Excepteur sint occaecat cupidatat non proident.
+            </p>
+          </article>
+          <article class="work__card">
+            <img
+              src="./img/room_homepage.png"
+              alt="Screenshot of Room Homepage project"
+              class="work__card-img"
+            />
+            <div class="work__card-header">
+              <h3 class="work__card-title">Room Homepage</h3>
+              <div class="work__card-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View source code"
+                >
+                  <span>Code</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View live demo"
+                >
+                  <span>Demo</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="work__card-desc">
+              Sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </article>
+          <article class="work__card">
+            <img
+              src="./img/tip-calculator.png"
+              alt="Screenshot of Tip Calculator project"
+              class="work__card-img"
+            />
+            <div class="work__card-header">
+              <h3 class="work__card-title">Tip Calculator</h3>
+              <div class="work__card-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View source code"
+                >
+                  <span>Code</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View live demo"
+                >
+                  <span>Demo</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="work__card-desc">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+            </p>
+          </article>
+          <article class="work__card">
+            <img
+              src="./img/weather_app.png"
+              alt="Screenshot of Weather App project"
+              class="work__card-img"
+            />
+            <div class="work__card-header">
+              <h3 class="work__card-title">Weather App</h3>
+              <div class="work__card-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View source code"
+                >
+                  <span>Code</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View live demo"
+                >
+                  <span>Demo</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="work__card-desc">
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur.
+            </p>
+          </article>
+          <article class="work__card">
+            <img
+              src="./img/calculator.png"
+              alt="Screenshot of Calculator project"
+              class="work__card-img"
+            />
+            <div class="work__card-header">
+              <h3 class="work__card-title">Calculator</h3>
+              <div class="work__card-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View source code"
+                >
+                  <span>Code</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View live demo"
+                >
+                  <span>Demo</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="work__card-desc">
+              Neque porro quisquam est, qui dolorem ipsum quia dolor.
+            </p>
+          </article>
+          <article class="work__card">
+            <img
+              src="./img/pokemon_search.png"
+              alt="Screenshot of Pokemon Search project"
+              class="work__card-img"
+            />
+            <div class="work__card-header">
+              <h3 class="work__card-title">Pokemon Search</h3>
+              <div class="work__card-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View source code"
+                >
+                  <span>Code</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View live demo"
+                >
+                  <span>Demo</span>
+                  <img
+                    src="./img/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="External link icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="work__card-desc">
+              Quis autem vel eum iure reprehenderit qui in ea voluptate.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <img
+        src="./img/pexels-goumbik-574071.jpg"
+        alt="Decorative background image"
+        class="footer__bg"
+      />
+      <div class="footer__content">
+        <div class="footer__contact">
+          <h2 class="footer__title">Get in Touch</h2>
+          <p class="footer__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+            justo nec nunc vestibulum tincidunt.
+          </p>
+          <div class="footer__links">
+            <a href="tel:+1234567890" class="footer__link">
+              <img
+                src="./img/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Phone icon"
+                class="footer__icon"
+              />
+              <span>Call me</span>
+            </a>
+            <a href="mailto:example@email.com" class="footer__link">
+              <img
+                src="./img/mail_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Email icon"
+                class="footer__icon"
+              />
+              <span>Email me</span>
+            </a>
+          </div>
+          <div class="footer__social">
+            <a
+              href="https://github.com/SylvainPS78"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my GitHub profile"
+              class="footer__social-link"
+            >
+              <svg></svg>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my LinkedIn profile"
+              class="footer__social-link"
+            >
+              <svg></svg>
+            </a>
+          </div>
+        </div>
+        <p class="footer__copyright">
+          &copy; <time datetime="2025">2025</time> Created by
+          <a
+            href="https://github.com/SylvainPS78"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Sylvain Web's GitHub profile (opens in new tab)"
+            >Sylvain Web</a
+          >
+        </p>
+      </div>
     </footer>
     <script src="./js/script.js" defer></script>
   </body>
