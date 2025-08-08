@@ -358,6 +358,73 @@ p {
 
 // Tablet styles
 @media (min-width: $breakpoint-tablet) {
+  .header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    text-align: left;
+    padding: $spacing-md;
+    align-items: start;
+    justify-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+
+    &__profile {
+      position: relative;
+      width: 100%;
+      height: auto;
+
+      margin: 0;
+      z-index: 5;
+      grid-column: 1;
+      grid-row: 1;
+
+      &-img {
+        width: 100%;
+        height: auto;
+        max-height: 385px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba($black, 0.2);
+      }
+
+      &-name {
+        position: absolute;
+        top: calc((120px - #{$spacing-md}) * 0.25);
+        left: 90%;
+        width: auto;
+        padding: 0;
+        font-size: $font-size-large;
+        color: $white;
+        background: none;
+        margin: 0;
+        z-index: 10;
+        text-align: left;
+        white-space: nowrap;
+      }
+    }
+
+    &__about {
+      position: relative;
+      width: 100%;
+      height: auto;
+      background-color: $white;
+      margin: 0;
+      margin-top: calc(120px - #{$spacing-md});
+      margin-left: calc(-#{$spacing-md});
+      padding: $spacing-md;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba($black, 0.1);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
   .work {
     &__grid {
       grid-template-columns: repeat(2, 1fr);
@@ -368,6 +435,24 @@ p {
     &__links {
       flex-direction: row;
       justify-content: center;
+    }
+  }
+}
+
+// Large tablet / Small desktop styles (900px - 1200px)
+@media (min-width: 900px) and (max-width: 1199px) {
+  .work {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-lg;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    &__card {
+      max-width: 400px;
+      width: 100%;
+      justify-self: center;
     }
   }
 }
